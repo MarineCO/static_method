@@ -24,6 +24,11 @@ class Armoire {
 		$a = new self();
 		return $a->db->limit($limit)->offset($offset)->find_many();
 	}
+
+	public static function get($id) {
+		return $this->db->find_one($id);
+	}
+
 }
 
 ?>
