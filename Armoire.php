@@ -16,6 +16,10 @@ class Armoire {
 		$this->db = ORM::for_table('mes_chaussettes');
 	}
 
+	public function getInstance() {
+		return $this->db;
+	}
+
 }
 
 ?>
