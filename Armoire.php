@@ -20,6 +20,10 @@ class Armoire {
 		return $this->db;
 	}
 
+	public static function all($limit, $offset) {
+		$a = new self();
+		return $a->db->limit($limit)->offset($offset)->find_many();
+	}
 }
 
 ?>
