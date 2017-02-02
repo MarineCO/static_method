@@ -26,7 +26,8 @@ class Armoire {
 	}
 
 	public static function get($id) {
-		return $this->db->find_one($id);
+		$b = new self();
+		return $b->db->find_one($id);
 	}
 
 }
